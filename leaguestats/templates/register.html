@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>register</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        Team Name
+        {{form.username}}
+        <br>
+        {{form.password1.label}}
+        {{form.password1}}
+        <br>
+        {{form.password2.label}}
+        {{form.password2}}
+        <br>
+        <input type="submit" name="Creat Coach User">
+    </form>
+    {{form.errors}}
+
+    {% for msg in messages %}
+        <p>{{msg}}</p>
+    {% endfor %}
+    <h3>Team names for registration</h3>
+    <ol>
+    {% for team in teams %}
+        <li>{{team.name}}</li>
+    {% endfor %}
+    </ol>
+</body>
+</html>

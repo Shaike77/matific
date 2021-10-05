@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>{{team.name}}</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Height</th>
+            <th>AVG score</th>
+            <th>Num of played games</th>
+        </tr>
+        {% for player in players %}
+        <tr>
+            <th>{{player.first_name}} {{player.last_name}}</th>
+            <th>{{player.height}}</th>
+            <th>{{player.average_score}}</th>
+            <th>{{player.number_of_played_games}}</th>
+        </tr>
+        {% endfor %}        
+</body>
+</html>

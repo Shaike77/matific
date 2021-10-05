@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1>Tornament # {{tournament}} Stats</h1>
+        <table>
+            <tr>
+                <th>game number</th>
+                <th>Home</th>
+                <th>Away</th>
+                <th>Winner</th>
+            </tr>
+            {% for game in games %}
+            <tr>
+                <th></th>
+                <th>{{game.team_1.name}} -  {{game.team_1_score}}</th>
+                <th>{{game.team_2.name}} -  {{game.team_2_score}}</th>
+                <th>{{game.winning_team.name}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+        <button onclick="window.location.href='http://127.0.0.1:8000/api/register/'">Register as a new coach</button>
+        <button onclick="window.location.href='http://127.0.0.1:8000/api/login/'">Login coach</button>
+    </body>
+</html>
